@@ -9,7 +9,7 @@ const loginRouter = require("./controllers/login");
 const middleware = require("./utils/middleware");
 
 mongoose
-  .connect(process.MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     logger.info("connected to MongoDB");
   })
