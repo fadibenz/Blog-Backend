@@ -30,8 +30,8 @@ app.use("/api/blogs", middleware.userExtractor, blogRouter);
 app.use("/api/users", userRouter);
 app.use("/api/login", loginRouter);
 
-app.listen(config.PORT, () => {
-  logger.info(`Server running on port ${config.PORT}`);
+app.listen(process.env.PORT, () => {
+  logger.info(`Server running on port ${process.env.PORT}`);
 });
 
 module.exports = app;
