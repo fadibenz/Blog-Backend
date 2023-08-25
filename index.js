@@ -1,4 +1,3 @@
-const config = require("./utils/config");
 const logger = require("./utils/logger");
 const blogRouter = require("./controllers/blogs");
 const express = require("express");
@@ -10,7 +9,7 @@ const loginRouter = require("./controllers/login");
 const middleware = require("./utils/middleware");
 
 mongoose
-  .connect(config.MONGODB_URI)
+  .connect(process.MONGODB_URI)
   .then(() => {
     logger.info("connected to MongoDB");
   })
